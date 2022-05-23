@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+	
+	<div class="main-title" style="background-color: #f2f2f2; ">
+		<div class="container">
+			<h1 class="main-title__primary">Связаться с нами</h1>
+			<h3 class="main-title__secondary">МЫ ЖДЕМ, КОГДА ВЫ СВЯЖЕТЕСЬ С НАМИ</h3>
+		</div>
+	</div>
+	<div class="breadcrumbs breadcrumbs--page-builder">
+		<div class="container">
+			<span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" title="Go to BuildPress." href="index.html" class="home">BuildPress</a></span>
+			<span typeof="v:Breadcrumb"><span property="v:title">Связаться с Нами</span></span>
+		</div>
+	</div>
+
+	<div class="master-container">
+{#		<div class="panel widget widget_pt_google_map panel-first-child panel-last-child" id="panel-29-0-0-0">	#}
+{#			<div class="simple-map  js-where-we-are" data-latlng="51.507331,-0.127668" data-markers="[{&quot;title&quot;:&quot;London&quot;,&quot;locationlatlng&quot;:&quot;51.507331,-0.127668&quot;,&quot;custompinimage&quot;:&quot;https:\/\/demo.proteusthemes.com\/buildpress\/wp-content\/themes\/buildpress\/assets\/images\/map_pin.png&quot;,&quot;id&quot;:&quot;1&quot;},{&quot;title&quot;:&quot;Second Office&quot;,&quot;locationlatlng&quot;:&quot;51.492742, -0.232989&quot;,&quot;custompinimage&quot;:&quot;https:\/\/demo.proteusthemes.com\/buildpress\/wp-content\/themes\/buildpress\/assets\/images\/map_pin.png&quot;,&quot;id&quot;:&quot;11&quot;},{&quot;title&quot;:&quot;Number of Locations is unlimited&quot;,&quot;locationlatlng&quot;:&quot;51.484192, 0.040065&quot;,&quot;custompinimage&quot;:&quot;https:\/\/demo.proteusthemes.com\/buildpress\/wp-content\/themes\/buildpress\/assets\/images\/map_pin.png&quot;,&quot;id&quot;:&quot;111&quot;}]" data-zoom="12" data-type="roadmap" data-style="[{&quot;featureType&quot;:&quot;landscape&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:65},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;poi&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:51},{&quot;visibility&quot;:&quot;simplified&quot;}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;visibility&quot;:&quot;simplified&quot;}]},{&quot;featureType&quot;:&quot;road.arterial&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:30},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;road.local&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:40},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;transit&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;visibility&quot;:&quot;simplified&quot;}]},{&quot;featureType&quot;:&quot;administrative.province&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;water&quot;,&quot;elementType&quot;:&quot;labels&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;},{&quot;lightness&quot;:-25},{&quot;saturation&quot;:-100}]},{&quot;featureType&quot;:&quot;water&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#ffff00&quot;},{&quot;lightness&quot;:-25},{&quot;saturation&quot;:-97}]}]" style="height: 380px;">#}
+{#			</div>#}
+{#		</div>#}
+		<div class="spacer-big"></div>
+		<div class="hentry container" role="main">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-grid widget widget_text panel-last-child">
+						<h3 class="widget-title">Связаться с Нами</h3>
+					</div>
+				</div>
+			</div>
+			<div class="spacer"></div>
+			<div class="row">
+				<div class="col-md-3">
+					<div class="textwidget panel widget">
+						<span class="icon-container"><span class="fa fa-home"></span></span> <b>BuildPress, llc.</b><br>
+						Малдыбаева 34А<br>
+						Кыргызстан, 720031<br><br>
+						<span class="icon-container"><span class="fa fa-phone"></span></span> <b>+996 706 06 5005</b><br>
+						<span class="icon-container"><span class="fa fa-fax"></span></span> <b>+996 706 06 5005</b><br>
+						<span class="icon-container"><span class="fa fa-envelope"></span></span><a href="mailto:info@example.com">info@buildpress.com</a>
+						<br><br>
+						<span class="icon-container"><span class="fa fa-home"></span></span> <b>Пон. - Субб. 8.00 - 18.00</b><br>
+						Воскр. отдых
+					</div>
+				</div>
+				<div class="col-md-9">
+					<div class="wpcf7" id="wpcf7-f5-o1" lang="en-US" dir="ltr">
+						<form method="post" class="wpcf7-form"> {% csrf_token %}
+							<div class="row">
+								<div class="col-xs-12  col-sm-4">
+									<span class="wpcf7-form-control-wrap your-name">
+										<input type="text" name="author" required id="id_author" value="" size="40" class="wpcf7-form-control wpcf7-text" placeholder="Ваше имя"/>
+									</span><br/>
+									<span class="wpcf7-form-control-wrap your-email">
+										<input type="email" name="email" required id="id_email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email" placeholder="Адрес электронной почты"/>
+									</span><br/>
+									<span class="wpcf7-form-control-wrap your-subject">
+										<input type="text" name="subject" required id="id_subject" value="" size="40" class="wpcf7-form-control wpcf7-text" placeholder="Предмет"/>
+									</span>
+								</div>
+								<div class="col-xs-12  col-sm-8">
+									<span class="wpcf7-form-control-wrap your-message">
+										<textarea name="text" required id="id_text" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" placeholder="Сообщение"></textarea>
+									</span><br/>
+									<input type="submit" value="Отправить" class="wpcf7-form-control wpcf7-submit btn btn-primary"/>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div><!-- /container -->
+	</div>
+{% endblock %}

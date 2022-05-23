@@ -1,0 +1,307 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+	<div class="main-title">
+		<div class="container">
+			<h1 class="main-title__primary">Магазин</h1>
+			<h3 class="main-title__secondary"> ГДЕ ВЫ МОЖЕТЕ НАЙТИ ЛУЧШИЕ ТОВАРЫ ПО НИЗКОЙ ЦЕНЕ </h3>
+		</div>
+	</div>
+	<div class="breadcrumbs ">
+		<div class="container">
+			<span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" title="Go to BuildPress." href="{% url 'home' %}" class="home">BuildPress</a></span>
+			<span property="v:title">Магазин</span>
+		</div>
+	</div>
+	<div class="master-container">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12  col-md-9  col-md-push-3" role="main">
+					<p class="woocommerce-result-count"></p>
+
+					<ul class="products">
+						<li class="product first">
+							<a href="shop-single.html">
+								<img width="150" height="150" src="images/demo/shop/9.jpg" alt="Brush" />
+								<h3>Кисточка</h3>
+								<div class="rating">
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star-half-o"></span>
+									<span class="fa fa-star-o"></span>
+								</div>
+								<span class="price"><span class="amount">&#36;15.00</span></span>
+							</a>
+							<a href="shop-cart.html" class="button add_to_cart_button">В корзину</a>
+						</li>
+						<li class="product">
+							<a href="shop-single.html">
+								<img width="150" height="150" src="images/demo/shop/13.jpg" alt="Forceps" />
+								<h3>Щипцы</h3>
+								<div class="rating">
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star-o"></span>
+								</div>
+								<span class="price"><span class="amount">&#36;3.00</span></span>
+							</a>
+							<a href="shop-cart.html" class="button add_to_cart_button">В корзину</a>
+						</li>
+						<li class="product">
+							<a href="shop-single.html">
+								<img width="150" height="150" src="images/demo/shop/11.jpg" alt="Hammer" />
+								<h3>Молоток</h3>
+								<div class="rating">
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+								</div>
+								<span class="price"><span class="amount">&#36;9.00</span></span>
+							</a>
+							<a href="shop-cart.html" class="button add_to_cart_button">В корзину</a>
+						</li>
+						<li class="product last">
+							<a href="shop-single.html">
+								<img width="150" height="150" src="images/demo/shop/10.jpg" alt="Hand Tools" />
+								<h3>Ручные Инструменты</h3>
+								<div class="rating">
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star-o"></span>
+								</div>
+								<span class="price"><span class="amount">&#36;15.00</span></span>
+							</a>
+							<a href="shop-cart.html" class="button add_to_cart_button">В корзину</a>
+						</li>
+						<li class="product first">
+							<a href="shop-single.html">
+								<img width="150" height="150" src="images/demo/shop/2.jpg" alt="Industrial Drill" />
+								<h3>Промышленная дрель</h3>
+								<div class="rating">
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star-half-o"></span>
+									<span class="fa fa-star-o"></span>
+									<span class="fa fa-star-o"></span>
+								</div>
+								<span class="price"><span class="amount">&#36;20.00</span></span>
+							</a>
+							<a href="shop-cart.html" class="button add_to_cart_button">В корзину</a>
+						</li>
+						<li class="product">
+							<a href="shop-single.html">
+								<img width="150" height="150" src="images/demo/shop/8.jpg" alt="Miter" />
+								<h3>Митра</h3>
+								<div class="rating">
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star-o"></span>
+									<span class="fa fa-star-o"></span>
+									<span class="fa fa-star-o"></span>
+								</div>
+								<span class="price"><span class="amount">&#36;35.00</span></span>
+							</a>
+							<a href="shop-cart.html" class="button add_to_cart_button">В корзину</a>
+						</li>
+						<li class="product">
+							<a href="shop-single.html">
+								<img width="150" height="150" src="images/demo/shop/7.jpg" alt="Nailer" />
+								<h3>Гвоздильщик</h3>
+								<div class="rating">
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+								</div>
+								<span class="price"><span class="amount">&#36;35.00</span></span>
+							</a>
+							<a href="shop-cart.html" class="button add_to_cart_button">В корзину</a>
+						</li>
+						<li class="product last">
+							<a href="shop-single.html">
+								<img width="150" height="150" src="images/demo/shop/12.jpg" alt="Pilers" />
+								<h3>Штабелеры</h3>
+								<div class="rating">
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star-half-o"></span>
+									<span class="fa fa-star-o"></span>
+								</div>
+								<span class="price"><span class="amount">&#36;9.00</span></span>
+							</a>
+							<a href="shop-cart.html" class="button add_to_cart_button">В корзину</a>
+						</li>
+						<li class="product first">
+							<a href="shop-single.html">
+								<img width="150" height="150" src="images/demo/shop/5.jpg" alt="Polishing Tool" />
+								<h3>Полирующий инструмент</h3>
+								<div class="rating">
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star-o"></span>
+								</div>
+								<span class="price"><span class="amount">&#36;35.00</span></span>
+							</a>
+							<a href="shop-cart.html" class="button add_to_cart_button">В корзину</a>
+						</li>
+						<li class="product">
+							<a href="shop-single.html">
+								<img width="150" height="150" src="images/demo/shop/3.jpg" alt="Portable Drill" />
+								<h3>Портативная Дрель</h3>
+								<div class="rating">
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+								</div>
+								<span class="price"><span class="amount">&#36;20.00</span></span>
+							</a>
+							<a href="shop-cart.html" class="button add_to_cart_button">В корзину</a>
+						</li>
+						<li class="product">
+							<a href="shop-single.html">
+								<img width="150" height="150" src="images/demo/shop/1.jpg" alt="Portable Saw" />
+								<h3>Переносная Пила</h3>
+								<div class="rating">
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star-half-o"></span>
+									<span class="fa fa-star-o"></span>
+								</div>
+								<span class="price"><span class="amount">&#36;20.00</span></span>
+							</a>
+							<a href="shop-cart.html" class="button add_to_cart_button">В корзину</a>
+						</li>
+						<li class="product last">
+							<a href="shop-single.html">
+								<img width="150" height="150" src="images/demo/shop/6.jpg" alt="Power Tool" />
+								<h3>Электроинструмент</h3>
+								<div class="rating">
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+								</div>
+								<span class="price"><span class="amount">&#36;35.00</span></span>
+							</a>
+							<a href="shop-cart.html" class="button add_to_cart_button">В корзину</a>
+						</li>
+					</ul>
+					<nav class="pagination text-center">
+						<ul class="page-numbers">
+							<li><span class="page-numbers current">1</span></li>
+							<li><a class="page-numbers" href="#">2</a></li>
+							<li><a class="next page-numbers" href="#"><i class="fa fa-caret-right"></i></a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="col-xs-12  col-md-3  col-md-pull-9">
+					<div class="sidebar shop-sidebar">
+						<!-- Search Widget -->
+						<div class="widget woocommerce widget_product_search push-down-30">
+							<h4 class="sidebar__headings">Поиск товаров</h4>
+							<div class="widget  widget_search  push-down-30">
+							<form role="search" method="get" class="search-form">
+								<label>
+									<span class="screen-reader-text">Поиск</span>
+									<input type="search" class="search-field" placeholder="Поиск &hellip;" value="" name="s" title="Search for:"/>
+								</label>
+								<input type="submit" class="search-submit" value="Поиск"/>
+							</form>
+						</div>
+						</div>
+						
+						<!-- Product categories Widget -->
+						<div class="widget woocommerce widget_product_categories push-down-30">
+							<h4 class="sidebar__headings">Категории продуктов</h4>
+							<ul class="product-categories">
+								<li><a href="#">Дрели</a></li>
+								<li><a href="#">Шлифовальные машины</a></li>
+								<li><a href="#">Ручные инструменты</a></li>
+								<li><a href="#">Пилы</a></li>
+								<li><a href="#">Вакуум</a></li>
+							</ul>
+						</div>
+						<!-- Top rated products Widget -->
+						<div class="widget woocommerce widget_top_rated_products push-down-30">
+							<h4 class="sidebar__headings">Продукты с самым высоким рейтингом</h4>
+							<ul class="product_list_widget">
+								<li>
+									<a href="#" title="Saw"><img width="90" height="90" src="images/demo/shop/15.jpg" alt="Saw" /><strong>Пила</strong></a>
+									<div class="rating">
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+									</div>
+									<span class="amount">&#36;9.00</span>
+								</li>
+								<li>
+									<a href="#" title="Forceps"><img width="90" height="90" src="images/demo/shop/13.jpg" alt="Forceps" /><strong>Щипцы</strong></a>
+									<div class="rating">
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+									</div>
+									<span class="amount">&#36;3.00</span>
+								</li>
+								<li>
+									<a href="#" title="Hammer"><img width="90" height="90" src="images/demo/shop/11.jpg" alt="Hammer" /><strong>Молоток</strong></a>
+									<div class="rating">
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+									</div>
+									<span class="amount">&#36;9.00</span>
+								</li>
+								<li>
+									<a href="#" title="Hand Tools"><img width="90" height="90" src="images/demo/shop/10.jpg" alt="Hand Tools" /><strong>Ручные Инструменты</strong></a>
+									<div class="rating">
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+									</div>
+									<span class="amount">&#36;15.00</span>
+								</li>
+								<li>
+									<a href="#" title="Hand Tools"><img width="90" height="90" src="images/demo/shop/4.jpg" alt="Standing Drill" /><strong>Дрель</strong></a>
+									<div class="rating">
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+									</div>
+									<span class="amount">&#36;18.00</span>
+								</li>
+							</ul>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+	<div class="main-title" style="background-color: #f2f2f2; ">
+		<div class="container">
+			<h1 class="main-title__primary">Блог</h1>
+			<h3 class="main-title__secondary">СОВЕТЫ И РЕКОМЕНДАЦИИ, КАК УЛУЧШИТЬ СВОЙ ДОМ</h3>
+		</div>
+	</div>
+	<div class="breadcrumbs">
+		<div class="container">
+			<span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" title="Go to BuildPress." href="index.html" class="home">BuildPress</a></span>
+			<span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" title="Go to Blog." href="blog.html">Блог</a></span>
+			<span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" title="Go to the Renavation category archives." href="blog.html">Обновление</a></span>
+			<span typeof="v:Breadcrumb"><span property="v:title">{{ blog.title }}</span></span>
+		</div>
+	</div>
+	<div class="master-container">
+		<div class="container">
+			<div class="row">
+				<main class="col-xs-12  col-md-9" role="main">
+					<article class="post tformat-standard hentry">
+						<a href="#">
+							<img width="848" height="480" src="{{ blog.image.url }}" class="img-responsive wp-post-image" alt="Project Image"/>
+						</a>
+						<div class="meta-data">
+							<time datetime="2014-10-23T11:14:43+00:00" class="meta-data__date">{{ blog.upload_date }}</time>
+							<span class="meta-data__categories">
+								{% for category in blog.category_list %}
+                                    <a href="blog-single.html">{{ category.title }}</a> &bull;
+                                {% endfor %}
+							</span>
+						</div>
+						<h1 class="hentry__title">{{ blog.title }}</h1>
+						<div class="hentry__content">
+							<p>
+                                {{ blog.text }}
+                            </p>
+						</div>
+						<div class="clearfix"></div>
+						<!-- Multi Page in One Post -->
+{#						<div id="comments">#}
+{#							<h2 class="alternative-heading">Написать комментарий</h2>#}
+{#							<div id="respond" class="comment-respond">#}
+{#								#}
+{#								<form method="post" id="commentform" class="comment-form">#}
+{#									<p class="comment-notes">#}
+{#										<span id="email-notes">Ваш адрес электронной почты не будет опубликован. </span> Обязательные поля отмечены  <span class="required">*</span>#}
+{#									</p>	#}
+{#									<div class="row">#}
+{#										<div class="col-xs-12 col-sm-6 form-group">#}
+{#											<label for="author">Имя и фамилия<span class="required theme-clr">*</span></label>#}
+{#											<input id="author" name="author" type="text" value="" class="form-control" />#}
+{#										</div>#}
+{#									</div>#}
+{#									<div class="row">#}
+{#										<div class="col-xs-12 col-sm-6 form-group">#}
+{#											<label for="email">Адрес электронной почты<span class="required theme-clr">*</span></label>#}
+{#											<input id="email" name="email" type="email" value="" class="form-control" />#}
+{#										</div>#}
+{#									</div>#}
+{#									<div class="row">#}
+{#										<div class="col-xs-12 col-sm-6 form-group">#}
+{#											<label for="url">Веб-страница</label>#}
+{#											<input id="url" name="url" type="url" value="" class="form-control"/>#}
+{#										</div>#}
+{#									</div>#}
+{#									<div class="row">#}
+{#										<div class="col-xs-12 form-group">#}
+{#											<label for="comment">Ваш комментарий<span class="theme-clr">*</span></label>#}
+{#											<textarea id="comment" name="comment" class="form-control" rows="8"></textarea>#}
+{#										</div>#}
+{#									</div>#}
+{#									<p class="form-submit">#}
+{#										<input name="submit" type="submit" id="comments-submit-button" class="submit" value="Опубликовать"/>#}
+{#									</p>#}
+{#								</form>#}
+{#							</div><!-- #respond -->#}
+{#						</div>	#}
+					</article>
+				</main>
+				<div class="col-xs-12  col-md-3">
+					<div class="sidebar">
+{#						<div class="widget  widget_search  push-down-30">#}
+{#							<form role="search" method="get" class="search-form" href="{% url 'blog' %}">#}
+{#								<label>#}
+{#									<span class="screen-reader-text">Поиск</span>#}
+{#									<input type="search" class="search-field" placeholder="Поиск &hellip;" value="" name="s" title="Search for:"/>#}
+{#								</label>#}
+{#								<input type="submit" class="search-submit" value="Поиск"/>#}
+{#							</form>#}
+{#						</div>#}
+						<div class="widget widget_recent_entries push-down-30">
+							<h4 class="sidebar__headings">Посты</h4>
+							<ul>
+                                {% for b in blogs %}
+								    <li><a href="{% url 'blog-single' b.pk %}">{{ b.title }}</a></li>
+                                {% endfor %}
+							</ul>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div><!-- /container -->
+	</div>
+{% endblock %}

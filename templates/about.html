@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+	<div class="main-title" style="background-color: #f2f2f2">
+		<div class="container">
+			<h1 class="main-title__primary">О Нас</h1>
+			<h3 class="main-title__secondary"> КОЕ-ЧТО О НАС </h3>
+		</div>
+	</div>
+	<div class="breadcrumbs ">
+		<div class="container">
+			<span typeof="v:Breadcrumb"><a title="Go to BuildPress." href="index.html" class="home">BuildPress</a></span>
+			<span typeof="v:Breadcrumb"><span>О Нас</span></span>
+		</div>
+	</div>
+	<div class="master-container">
+		<div class="container">
+			<div class="row">
+				<main class="col-xs-12" role="main">
+					<div class="row">
+						<div class="col-md-6">
+							<p>BuildPress Inc ведет свою историю с 2020 года в Кыргызстане и с тех пор никогда не оглядывалась назад. Имея
+								за плечами тысячи успешных проектов, мы можем с гордостью сказать, что являемся одной из самых надежных строительных компаний в
+								Колорадо, выполняющих как внутренние, так и международные строительные работы.</p>
+							<p>Уже 2 года компания Construction предлагает широкий спектр строительных услуг в Кыргызстане и многих других городах.
+								Мы стремимся поддерживать самые высокие стандарты, превосходя при этом ожидания клиентов
+								на всех уровнях. Мы не только выполняем взятые на себя обязательства, но и известны тем, что соблюдаем жесткие сроки, обеспечивая при этом только самое
+								лучшее. Мы стремимся создать отзывчивые отношения с клиентами, которые позволяют нам достигать и даже превосходить цели каждого из наших
+								проекты.</p>
+							<p>BuildPress Inc хорошо известна своими инновациями и успешным сотрудничеством с нашими клиентами, проектировщиками,
+								субподрядчиками, консультантами, а также поставщиками; мы смогли предоставить более специализированный уровень услуг.
+								Мы постоянно развиваемся и понимаем различные аспекты предоставления высококачественных строительных и комплексных
+								проекты с легкостью.</p>
+						</div>
+						<div class="col-md-6">
+							<p>
+								<a href="{% static 'images/demo/projects/project1.png' %}" data-rel="prettyPhoto" title="Project Image">
+									<img src="{% static 'images/demo/projects/project1.png' %}" class="alignnone" alt="Project Image" />
+								</a>
+							</p>
+						</div>
+					</div>
+					<div class="spacer"></div>
+					<div class="row">
+                        {% for employee in employees %}
+                            <div class="col-md-3">
+                                <h4>
+                                    <a href="{{ employee.image.url }}" data-rel="prettyPhoto" title="Member name">
+                                        <img src="{{ employee.image.url }}" class="alignleft" alt="{{ employee.name }}" width="526" height="350"/>
+                                    </a>
+                                </h4>
+                                <h5>{{ employee.name }}</h5>
+                                <p><em>{{ employee.role }}</em></p>
+                                <p>
+                                    {{ employee.description }}
+                                </p>
+                            </div>
+                        {% endfor %}
+					</div>	
+				</main>
+			</div>
+		</div><!-- /container -->
+	</div>
+{% endblock %}

@@ -1,0 +1,358 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+	<div class="jumbotron  jumbotron--with-captions">
+		<div class="carousel  slide  js-jumbotron-slider" id="headerCarousel" data-interval="5000">
+			<!-- Wrapper -->
+			<div class="carousel-inner">
+				<div class="item active">
+					<img src="{% static 'images/demo/slider/slider_04.jpg' %}"	alt="The Best Construction HTML Theme" />
+					<div class="container">
+						<div class="carousel-content">
+							<div class="jumbotron__category">
+								<h6>Мемориал</h6>
+							</div>
+							<div class="jumbotron__title">
+								<h1>Почему стоит обратиться к нам?</h1>
+							</div>
+							<div class="jumbotron__content">
+								<p>Благодаря передовым технологиям и отзывчивости мы являемся лидерами в своей сфере</p>
+								<a class="btn  btn-primary" href="#" target="_blank">Подробнее</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<img src="{% static 'images/demo/slider/slider_05.jpg' %}" alt="Construction Management">
+					<div class="container">
+						<div class="carousel-content">
+							<div class="jumbotron__category">
+								<h6>МЫ ПОЗАБОТИМСЯ ОБО ВСЕМ</h6>
+							</div>
+							<div class="jumbotron__title">
+								<h1>Управление строительством</h1>
+							</div>
+							<div class="jumbotron__content">
+								<p>Мы обеспечиваем общее планирование, координацию и контроль проекта, так что вам не нужно ни о чем беспокоиться.</p>
+								<a class="btn  btn-primary" href="our-services" target="_self">Подробнее</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item ">
+					<img src="{% static 'images/demo/slider/slider_01.jpg' %}" alt="Green School in London">
+					<div class="container">
+						<div class="carousel-content">
+							<div class="jumbotron__category">
+								<h6>РЕКОМЕНДУЕМЫЙ ПРОЕКТ</h6>
+							</div>
+							<div class="jumbotron__title">
+								<h1> Школа в Лондоне</h1>
+							</div>
+							<div class="jumbotron__content">
+								<p>Мы перестроили весь школьный центр в верхнем ист-Лондоне всего за 2 года. Школа сейчас работает более эффективно, чем когда-либо прежде.</p>
+								<a class="btn  btn-primary" href="projects" target="_self">Подробнее</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<img src="{% static 'images/demo/slider/slider_07.jpg' %}" alt="Relationships That Last" />
+					<div class="container">
+						<div class="carousel-content">
+							<div class="jumbotron__category">
+								<h6>ОБЕСПЕЧЕНИИ ГАРАНТИИ</h6>
+							</div>
+							<div class="jumbotron__title">
+								<h1>НАШИ ОБЩИЕ ОТНОШЕНИЯ</h1>
+							</div>
+							<div class="jumbotron__content">
+								<p>Наше обещание как подрядчика заключается в том, чтобы привнести общественную ценность в каждый проект, предоставляя при этом профессиональные знания.</p>
+								<a class="btn  btn-primary" href="about-us" target="_self">Подробнее</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<img src="{% static 'images/demo/slider/slider_03.jpg' %}" alt="Renovating Homes and Offices">
+					<div class="container">
+						<div class="carousel-content">
+							<div class="jumbotron__category">
+								<h6>Наши услуги</h6>
+							</div>
+							<div class="jumbotron__title">
+								<h1>Ремонт домов и офисов</h1>
+							</div>
+							<div class="jumbotron__content">
+								<p>Мы предлагаем самые комплексные услуги по ремонту домов в стране, от дизайна кухни до ремонта ванной комнаты.</p>
+								<a class="btn  btn-primary" href="our-services" target="_self">Подробнее</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Controls -->
+			<a class="left carousel-control" href="#headerCarousel" role="button" data-slide="prev">
+				<i class="fa fa-angle-left"></i>
+			</a>
+			<a class="right carousel-control" href="#headerCarousel" role="button" data-slide="next">
+				<i class="fa fa-angle-right"></i>
+			</a>
+		</div>
+	</div>
+	<div class="master-container">
+		<div class="promo">
+			<div class="container" >
+				<div class="row">
+					<div class="col-md-12">
+						<div class="siteorigin-panels-stretch panel-row-style" style="background-color:#eeeeee">
+							<div class="panel-grid-cell">
+								<div class="panel widget widget_pt_banner panel-first-child panel-last-child">	
+									<div class="banner__text">
+										Ищете качественный и доступный проект?
+									</div>
+									<div class="banner__buttons">
+										<a class="btn btn-primary" href="{% url 'about-us' %}" target="_self">Обратная Связь</a>&nbsp;
+										<a class="btn  btn-default" href="{% url 'projects' %}" target="_self">Наши проекты</a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="spacer"></div>
+
+		<div class="portfolio-mini-wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<!-- GRID WRAPPER FOR CONTAINER SIZING - HERE YOU CAN SET THE CONTAINER SIZE AND CONTAINER SKIN -->
+						<div class="portfolio-container portfolio-active">
+							<div id="options" class="text-left">
+								<!-- THE FILTER BUTTONS -->
+								<ul id="filters" class="filter">
+									<li class="active"><a href="#" data-filter="*">Все проекты</a></li>
+                                    {% for category in categories %}
+									    <li><a href="#" data-filter=".filter-{{ category.code }}">{{ category.title }}</a></li>
+                                    {% endfor %}
+								</ul>
+							</div>
+                                <div id="portfolio-content" class="projects-container row">
+                                    {% for project in projects %}
+                                        <div class="project-post {{ project.category_codes }} col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                            <!-- THE CONTAINER FOR THE MEDIA AND THE COVER EFFECTS -->
+                                            <img src="{{ project.image.image.url }}" alt="Project Image" />
+                                            <div class="project-content">
+                                                <div class="inner-project">
+                                                    <h3>{{ project.title }}</h3>
+                                                    <a href="{% url 'project-single' project.pk %}" class="project-link">Подробнее</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+
+                                </div>
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<div class="spacer-big"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="panel widget widget_text panel-first-child" id="panel-7-3-0-0">	
+						<div class="textwidget"></div>
+					</div>
+					<div class="panel panel-grid widget widget_black-studio-tinymce panel-last-child" id="panel-7-3-0-1">
+						<h3 class="widget-title">Почему мы?</h3>
+						<div class="textwidget">
+							<h5>
+								<span style="color: #fcc71f"><br/><span class="icon-container"><span class="fa fa-check"></span></span></span> 
+								<span style="color: #333333">МЫ УВЛЕЧЕНЫ</span>
+							</h5>
+							<p>
+								У нас есть подтвержденный послужной список, и мы являемся уважаемой компанией в Кыргызстане. Мы гарантируем, что все проекты
+								выполняются с предельным профессионализмом с использованием качественных материалов, предлагая клиентам поддержку и доступность.
+							</p>
+							<h5>
+								<span style="color: #fcc71f"><br/><span class="icon-container"><span class="fa fa-check"></span></span></span>
+								ЧЕСТНО И НАДЕЖНО
+							</h5>
+							<p>
+								Для нас честность - это единственная политика, и мы стремимся добросовестно выполнять все проекты не только с нашими клиентами,
+								но и с нашими поставщиками и подрядчиками. Имея за плечами тысячи успешных проектов, мы являемся одной из самых
+								надежных строительных компаний в США
+							</p>
+							<h5>
+								<span style="color: #fcc71f"><br/><span class="icon-container"><span class="fa fa-check"></span></span></span> 
+								<span style="color: #333333">МЫ ПОСТОЯННО СОВЕРШЕНСТВУЕМСЯ</span>
+							</h5>
+							<p>
+								Мы обязуемся завершить все проекты в сроки, установленные нашими клиентами. Мы используем лучшие технологии и
+								инструменты, чтобы гарантировать, что все работы выполняются быстро, но также уделяем внимание деталям и гарантируем, что все сделано правильно.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="panel widget widget_text panel-first-child" id="panel-7-3-1-0">	
+						<div class="textwidget"></div>
+					</div>
+					<div class="panel panel-grid widget widget_black-studio-tinymce panel-last-child" id="panel-7-3-1-1">
+						<h3 class="widget-title">Кто мы?</h3>
+						<div class="textwidget">
+							<p>
+								<a href="{% static 'images/demo/content/content_23.png' %}" data-rel="prettyPhoto">
+									<img class="alignleft wp-image-115 size-medium" src="{% static 'images/demo/content/content_23.png' %}" alt="Content Image" width="300" height="168"/>
+								</a>
+								<a href="{% static 'images/demo/content/content_24.png' %}" data-rel="prettyPhoto">
+									<img class="alignleft wp-image-116 size-medium" src="{% static 'images/demo/content/content_24.png' %}" alt="Content Image" width="300" height="168"/>
+								</a>
+							</p>
+							<p>
+								BuildPress Inc ведет свою историю с 2020 года в Кыргызстане и с тех пор никогда не оглядывалась назад. Имея
+								за плечами тысячи успешных проектов, мы можем с гордостью сказать, что являемся одной из самых надежных строительных компаний
+								в Кыргызстане, выполняющем как внутренние, так и международные строительные работы. Вот уже более 25 лет компания
+								предлагает широкий спектр строительных услуг в Кыргызстане.
+							</p>
+							<p> Мы стремимся поддерживать самые высокие стандарты, превосходя ожидания клиентов на всех уровнях.</p>
+							<h5><strong><a href="{% url 'about-us' %}">Подробнее</a></strong></h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="spacer-big"></div>
+		<div class="siteorigin-panels-stretch panel-row-style testimonials-bg">
+			<div class="container">
+				<div class="panel-grid">
+					<div class="panel-grid-cell" id="pgc-7-4-0">
+						<div class="panel widget widget_pt_testimonials panel-first-child panel-last-child">
+							<div class="testimonial">
+								<h2 class="widget-title">
+									<a class="testimonial__carousel testimonial__carousel--left" href="#carousel-testimonials-widget-4-0-0" data-slide="next">
+										<i class="fa  fa-angle-right" aria-hidden="true"></i>
+										<span class="sr-only" role="button">След.</span>
+									</a>
+									<a class="testimonial__carousel  testimonial__carousel--right" href="#carousel-testimonials-widget-4-0-0" data-slide="prev">
+										<i class="fa  fa-angle-left" aria-hidden="true"></i>
+										<span class="sr-only" role="button">Пред.</span>
+									</a>
+									Рекомендации
+								</h2>
+								<div id="carousel-testimonials-widget-4-0-0" class="carousel slide">
+									<!-- Wrapper for slides -->
+									<div class="carousel-inner" role="listbox">
+										<div class="item active">
+											<div class="row">
+												<div class="col-xs-12  col-sm-6">
+													<blockquote class="testimonial__quote">
+														Наши специалисты по управлению строительством организуют, руководят и управляют людьми,
+														материалами и процессами строительства, используя новейшие технологии в отрасли.
+														Наше управление строительством Наше управление строительством.
+													</blockquote>
+													<cite class="testimonial__author">Боб строитель</cite>
+													<div class="testimonial__rating">
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>	
+													</div>
+												</div>
+												<div class="col-xs-12  col-sm-6">
+													<blockquote class="testimonial__quote">
+														Мы стремимся устранить задачу разделения вашего проекта между различными архитектурными и
+														строительными компаниями. Мы являемся компанией, которая предлагает вам услуги по проектированию и строительству от
+														первоначальных эскизов до окончательного строительства.
+													</blockquote>
+													<cite class="testimonial__author">Сара Конор</cite>
+													<div class="testimonial__rating">
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>		
+													</div>
+												</div>
+											</div>
+										</div> 
+										<div class="item">
+											<div class="row">	
+												<div class="col-xs-12  col-sm-6">
+													<blockquote class="testimonial__quote">
+														Мы предлагаем качественные решения для укладки плитки и покраски внутренних и внешних помещений жилых и
+														коммерческих помещений, которые не только хорошо выглядят, но и служат дольше. Мы предлагаем качественные
+														решения для укладки плитки и покраски как внутри, так и снаружи.
+													</blockquote>
+													<cite class="testimonial__author">Райан Гослинг</cite>
+													<div class="testimonial__rating">
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+													</div>
+												</div>
+												<div class="col-xs-12  col-sm-6">
+													<blockquote class="testimonial__quote">
+														Для нас честность - это единственная политика, и мы стремимся добросовестно выполнять все проекты не
+														только с нашими клиентами, но и с нашими поставщиками и подрядчиками. Имея за плечами тысячи успешных
+														проектов, мы являемся одной из самых надежных строительных компаний в США.
+													</blockquote>
+													<cite class="testimonial__author">Junkey</cite>
+													<div class="testimonial__rating">
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>	
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel-grid" id="pg-7-5">
+			<div class="promobg">
+				<div class="container">
+					<div class="panel widget row">	
+						<div class="col-md-12">
+							<div class="motivational-text">
+								Наше обещание как подрядчика заключается в том, чтобы привнести общественную ценность в каждый проект, предоставляя профессиональный опыт, исключительное обслуживание клиентов и качественное строительство.							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="spacer-big"></div>
+		<div class="panel-grid">
+			<div class="panel-grid-cell">
+				<div class="panel container">
+					<h3 class="widget-title">Клиенты / Партнеры / Сертификаты</h3>
+					<div class="textwidget">
+						<div class="logo-panel">
+							<div class="row">
+								{% for reward in rewards %}
+                                    <div class="col-xs-12 col-sm-2"><img src="{{ reward.image.url }}" alt="Client" width="208" height="98"></div>
+                                {% endfor %}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

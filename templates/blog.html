@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+	
+	<div class="main-title" style="background-color: #f2f2f2; ">
+		<div class="container">
+			<h1 class="main-title__primary">Блог</h1>
+			<h3 class="main-title__secondary">СОВЕТЫ И РЕКОМЕНДАЦИИ, КАК УЛУЧШИТЬ СВОЙ ДОМ</h3>
+		</div>
+	</div>
+	<div class="breadcrumbs ">
+		<div class="container">
+			<span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" title="Go to BuildPress." href="{% url 'home' %}" class="home">BuildPress</a></span>
+			<span typeof="v:Breadcrumb"><span property="v:title">БЛОГ</span></span>
+		</div>
+	</div>
+	<div class="master-container">
+		<div class="container">
+			<div class="row">
+				<main class="col-xs-12  col-md-9" role="main">
+					<div class="row">
+                        {% for blog in blogs %}
+                            <div class="col-xs-12">
+                                <article class="post sticky hentry post-inner">
+                                    <a href="blog-single.html">
+                                        <img width="848" height="480" src="{{ blog.image.url }}" class="img-responsive wp-post-image" alt="Content Image"/>
+                                    </a>
+                                    <div class="meta-data">
+                                        <time datetime="2014-10-13T13:59:35+00:00" class="meta-data__date">{{ blog.upload_date }}</time>
+                                        <span class="meta-data__categories">
+                                            {% for category in blog.category_list %}
+                                                <a href="blog-single.html">{{ category.title }}</a> &bull;
+                                            {% endfor %}
+                                        </span>
+                                    </div>
+                                    <h2 class="hentry__title">
+                                        <a href="{% url 'blog-single' blog.pk %}">{{ blog.title }}</a>
+                                    </h2>
+                                    <div class="hentry__content">
+                                        <p>{{ blog.description }}</p>
+                                        <p><a href="{% url 'blog-single' blog.pk %}" class="more-link"><span class="read-more read-more--post">Подробнее</span></a></p>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </article>
+                            </div><!-- /blogpost -->
+                        {% endfor %}
+					</div>
+				</main>
+				<div class="col-xs-12  col-md-3">
+					<div class="sidebar">
+						<div class="widget  widget_search  push-down-30">
+							<form role="search" method="get" class="search-form">
+								<label>
+									<span class="screen-reader-text">Поиск</span>
+									<input type="search" class="search-field" placeholder="Поиск &hellip;" value="" name="s" title="Search for:"/>
+								</label>
+								<input type="submit" class="search-submit" value="Поиск"/>
+							</form>
+						</div>	
+						<div class="widget widget_recent_entries push-down-30">	
+							<h4 class="sidebar__headings">Посты</h4>
+							<ul>
+                                {% for blog in blogs %}
+								    <li><a href="{% url 'blog-single' blog.pk %}">{{ blog.title }}</a></li>
+                                {% endfor %}
+							</ul>
+						</div>
+						
+						<div class="widget widget_tag_cloud push-down-30">
+							<h4 class="sidebar__headings">Тэги</h4>
+							<div class="tagcloud">
+                                {% for category in categories %}
+								    <a href="?cat={{ category.code }}" title="{{ category.count }} topics" style="font-size: 12pt;">{{ category.title }}</a>
+                                {% endfor %}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- /container -->
+	</div>
+{% endblock %}

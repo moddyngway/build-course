@@ -1,0 +1,212 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8"/>
+	<title>BuildPress | We Build Structures &amp; Relationships to Last</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400,700%3Alatin%7CMontserrat%3A700%3Alatin"/>
+	<link rel="stylesheet" href="{% static 'css/prettyPhoto.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/shop.css' %}"/>
+
+	<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/isotope.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/imagesloaded.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/modernizr.custom.24530.js' %}"></script>
+
+
+</head>
+<body class="home page">
+
+<div class="boxed-container">
+	<header class="header">
+		<div class="container">
+			<div class="logo">
+				<a href="index.html">
+					<img src="{% static 'images/logo.png' %}" alt="BuildPress" class="img-responsive"/>
+				</a>
+			</div>
+			<div class="header-widgets  header-widgets-desktop">
+				<div class="widget  widget-icon-box">
+					<div class="icon-box">
+						<i class="fa  fa-phone  fa-3x"></i>
+						<div class="icon-box__text">
+							<h4 class="icon-box__title">(+996) 706065005</h4>
+							<span class="icon-box__subtitle"> buildpress@gmail.com </span>
+						</div>
+					</div>
+				</div>
+				<div class="widget  widget-icon-box">
+					<div class="icon-box">
+						<i class="fa fa-home fa-3x"></i>
+						<div class="icon-box__text">
+							<h4 class="icon-box__title">Maldybaeva 34A</h4>
+							<span class="icon-box__subtitle">Bishkek, 320034</span>
+						</div>
+					</div>
+				</div>
+				<div class="widget  widget-icon-box">
+					<div class="icon-box">
+						<i class="fa  fa-clock-o  fa-3x"></i>
+						<div class="icon-box__text">
+							<h4 class="icon-box__title">Пон. - Субб. 8.00 - 18.00</h4>
+							<span class="icon-box__subtitle">Воскр. отдых</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Toggle Button for Mobile Navigation -->
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#buildpress-navbar-collapse">
+				<span class="navbar-toggle__text">MENU</span>
+				<span class="navbar-toggle__icon-bar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</span>
+			</button>
+		</div>
+		<div class="sticky-offset js-sticky-offset"></div>
+		<div class="container">
+			<div class="navigation">
+				<div class="collapse  navbar-collapse" id="buildpress-navbar-collapse">
+					<ul id="menu-main-menu" class="navigation--main">
+						<li class="current-menu-item"><a href={% url 'home' %}>Главная</a></li>
+						<li><a href="{% url 'projects' %}">Проекты</a></li>
+{#						<li class="menu-item-has-children">#}
+{#							<a href="services.html">Наши услуги</a>#}
+{#							<ul class="sub-menu">#}
+{#								<li><a href="services-content/construction-management.html">Управление Строительством</a></li>#}
+{#								<li><a href="services-content/design-and-build.html">Проектирование и Строительство</a></li>#}
+{#								<li><a href="services-content/kitchen-remodeling.html">Ремонт Кухни</a></li>#}
+{#								<li><a href="services-content/tiling-and-painting.html">Укладка плитки и покраска</a></li>#}
+{#								<li><a href="services-content/condo-remodeling.html">Реконструкция Кондоминиума</a></li>#}
+{#								<li><a href="services-content/hardwood-flooring.html">Паркетные Полы</a></li>#}
+{#								<li><a href="services.html">Все Услуги</a></li>#}
+{#							</ul>#}
+{#						</li>#}
+						<li><a href="{% url 'about-us' %}">О Нас</a></li>
+						<li><a href="{% url 'blog' %}">Блог</a></li>
+						<li><a href="{% url 'contacts' %}">Контакты</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="header-widgets  hidden-md  hidden-lg">
+				<div class="widget  widget-icon-box">
+					<div class="icon-box">
+						<i class="fa  fa-phone  fa-3x"></i>
+						<div class="icon-box__text">
+							<h4 class="icon-box__title">(+996) 706065005</h4>
+							<span class="icon-box__subtitle">buildpress@gmail.com</span>
+						</div>
+					</div>
+				</div>
+				<div class="widget  widget-icon-box">
+					<div class="icon-box">
+						<i class="fa  fa-home  fa-3x"></i>
+						<div class="icon-box__text">
+							<h4 class="icon-box__title">Maldybaeva 34A</h4>
+							<span class="icon-box__subtitle">Bishkek, 320034</span>
+						</div>
+					</div>
+				</div>
+				<div class="widget  widget-icon-box">
+					<div class="icon-box">
+						<i class="fa  fa-clock-o  fa-3x"></i>
+						<div class="icon-box__text">
+							<h4 class="icon-box__title">Пон. - Субб. 8.00 - 18.00</h4>
+							<span class="icon-box__subtitle">Воскр. отдых</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+    {% block content %}
+    {% endblock %}
+
+	<footer>
+		<div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-6">
+						<div class="widget  widget_text  push-down-30">
+							<h6 class="footer__headings">О Нас</h6>
+							<div class="textwidget">
+								<img src="{% static 'images/logo_footer.png' %}" alt="Footer Logo" width="218" height="45" />
+								<br><br>
+								Наши специалисты по управлению строительством организуют, руководят и управляют людьми, материалами и процессами
+								строительства, используя специалистов по управлению строительством.
+								<br><br>
+								<strong><a href="{% url 'about-us' %}" class="read-more" target="_blank">Подробнее</a></strong>
+							</div>
+						</div>
+					</div>
+{#					<div class="col-xs-12  col-md-4">#}
+{#						<div class="widget  widget_nav_menu  push-down-30">#}
+{#							<h6 class="footer__headings">Навигация</h6>#}
+{#							<div class="menu-top-menu-container">#}
+{#								<ul id="menu-top-menu-1" class="menu">#}
+{#									<li><a href="extras.html">Дополнительные услуги</a>#}
+{#										<ul class="sub-menu">#}
+{#											<li><a href="tables.html">Таблицы</a></li>#}
+{#											<li><a href="brochure-box.html">Коробка для брошюр</a></li>#}
+{#										</ul>#}
+{#									</li>#}
+{#									<li><a href="alternative-page.html">Альтернативные Страницы</a>#}
+{#										<ul class="sub-menu">#}
+{#											<li><a href="shop-front.html">Магазин домов</a></li>#}
+{#											<li><a href="contact-multiple-locations.html">Несколько Контактов</a></li>#}
+{#											<li><a href="#">Команда &#038; Контактное лицо</a></li>#}
+{#										</ul>#}
+{#									</li>#}
+{#									<li>#}
+{#										<a target="_blank" href="#">Онлайн документация</a>#}
+{#									</li>#}
+{#								</ul>#}
+{#							</div>#}
+{#						</div>#}
+{#					</div>#}
+					<div class="col-xs-12  col-md-6">
+						<div class="widget  widget_text  push-down-30">
+							<h6 class="footer__headings">Преобрести</h6>
+							<div class="textwidget">
+								Если вы проделали весь этот путь сюда, вам, вероятно, действительно нравится наша компания BuildPress. Чтобы избавить вас от всех
+								проблем с поиском, где купить эту тему, у нас тоже есть решение для этого. Просто нажмите на кнопку ниже.
+								<br><br>
+								<a class="btn  btn-primary" href="#" target="_blank">Купить</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="footer-bottom__left">
+					BuildPress
+				</div>
+				<div class="footer-bottom__right">
+					&copy; 2020 - 2022 <strong>ОсОО, BuildPress </strong>. Все права защищены.
+				</div>
+			</div>
+		</div>
+	</footer>
+</div><!-- end of .boxed-container -->
+
+<script type="text/javascript" src="{% static 'js/almond.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/underscore.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'js/jquery.prettyPhoto.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/header_carousel.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/sticky_navbar.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/simplemap.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/main.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>

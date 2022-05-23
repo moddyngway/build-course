@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+	<div class="main-title" style="background-color: #f2f2f2; ">
+		<div class="container">
+			<h1 class="main-title__primary">Проекты</h1>
+			<h3 class="main-title__secondary">ЧТО МЫ СДЕЛАЛИ ДО СИХ ПОР</h3>
+		</div>
+	</div>
+	<div class="breadcrumbs ">
+		<div class="container">
+			<span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" title="Go to BuildPress." href="index.html" class="home">BuildPress</a></span>
+			<span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" title="Go to Projects." href=".projects.html">Проекты</a></span>
+			<span typeof="v:Breadcrumb"><span property="v:title">Современная Вилла</span></span>
+		</div>
+	</div>
+	<div class="master-container">
+		<div class="container">
+			<div class="row">
+			<main class="col-xs-12" role="main">
+				<article class="single hentry post-inner">
+					<h2 class="hentry__title">{{ project.title }}</h2>
+					<div class="row">
+						<div class="col-xs-12 col-md-6">
+							<div class="hentry__content  project__content">
+								<h4 class="alternative-heading">Описание</h4>
+								<p>
+									{{ project.description }}
+								</p>
+						</div>
+						<div class="col-xs-12 col-md-6">
+							<div class="project__gallery">
+                                {% for image in project.images %}
+								<a href="{{ image.image.url }}" data-rel="prettyPhoto">
+									<img width="555" height="312" src="{{ image.image.url }}" class="attachment-project-gallery" alt="Project Image"/>
+								</a>
+                                {% endfor %}
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</article>
+			</main>
+			</div>
+		</div>
+	</div>
+{% endblock %}

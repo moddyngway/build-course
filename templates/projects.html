@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+	
+	<div class="main-title" style="background-color: #f2f2f2">
+		<div class="container">
+			<h1 class="main-title__primary">Проект</h1>
+			<h3 class="main-title__secondary">ЭТО НАША ЛУЧШАЯ РАБОТА</h3>
+		</div>
+	</div>
+	<div class="breadcrumbs">
+		<div class="container">
+			<span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" title="Go to BuildPress." href="{% url 'home' %}" class="home">BuildPress</a></span>
+			<span typeof="v:Breadcrumb"><span property="v:title">Проекты</span></span>
+		</div>
+	</div>
+	<div class="master-container">
+		<div class="container">
+			<div class="row">
+				<main class="col-xs-12" role="main">
+					<div class="row">
+						
+						<div class="portfolio-mini-wrapper portfolio-light">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-12">
+										<!-- GRID WRAPPER FOR CONTAINER SIZING - HERE YOU CAN SET THE CONTAINER SIZE AND CONTAINER SKIN -->
+										<div class="portfolio-container">
+											<div id="options" class="text-left">
+												<!-- THE FILTER BUTTONS -->
+												<ul id="filters" class="filter">
+													<li class="active"><a href="#" data-filter="*">Все Проекты</a></li>
+
+                                                    {% for category in categories %}
+
+													<li><a href="#" data-filter=".filter-{{ category.code }}">{{ category.title }}</a></li>
+
+                                                    {% endfor %}
+												</ul>
+											</div>
+											<!-- THE GRID ITSELF WITH ENTRIES -->
+											<div id="portfolio-content" class="projects-container row">
+                                                {% for project in projects %}
+                                                    <div class="project-post {{ project.category_codes }} col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                                        <!-- THE CONTAINER FOR THE MEDIA AND THE COVER EFFECTS -->
+                                                        <img src="{{ project.image.image.url }}" alt="Project Image"  />
+                                                        <div class="project-content">
+                                                            <div class="inner-project">
+                                                                <h3>{{ project.title }}</h3>
+                                                                <a class="project-link" href="{% url 'project-single' project.pk %}">
+                                                                    Подробнее
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                {% endfor %}
+										</div>
+									</div>
+									<div class="clear"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</main>
+			</div>
+		</div><!-- /container -->
+	</div>
+{% endblock %}
